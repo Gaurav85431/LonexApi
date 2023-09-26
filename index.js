@@ -24,7 +24,7 @@ const product_routes = require('./routes/productRoute');
 app.use('/api', product_routes);
 
 
-app.get('/myapi', (req, res) => {
+app.post('/myapi', (req, res) => {
   res.send("hello");
 });
 
