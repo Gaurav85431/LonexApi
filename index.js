@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/mySaloon');
+// mongoose.connect('mongodb://127.0.0.1:27017/mySaloon');
+// mongodb+srv://pushpamgaurav3:e5tvoDyrEvo1HDqp@mysaloon.rlqufop.mongodb.net/
+mongoose.connect('mongodb+srv://pushpamgaurav3:e5tvoDyrEvo1HDqp@mysaloon.rlqufop.mongodb.net/');
 
 //user routes 
 
