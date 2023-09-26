@@ -43,7 +43,10 @@ const register_user = async (req, res) => {
 
       type: req.body.type
     });
+
     const userData = await user.findOne({ email: req.body.email });
+
+
     if (userData) {
       res.status(200).send({ success: false, msg: "This email is already exists" });
     }
@@ -67,6 +70,7 @@ const user_login = async (req, res) => {
     const password = req.body.password;
 
     const userData = await user.findOne({ email: email });
+
 
     if (userData) {
       const passwordMatch = await bcyptjs.compare(password, userData.password);

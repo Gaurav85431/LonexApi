@@ -24,6 +24,11 @@ const product_routes = require('./routes/productRoute');
 app.use('/api', product_routes);
 
 
+app.get('/myapi', (req, res) => {
+  res.send("hello");
+});
+
+
 app.get('/getapi', (req, res) => {
 
 
